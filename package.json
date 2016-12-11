@@ -1,0 +1,34 @@
+{
+  "name": "zilch",
+  "version": "0.0.2",
+  "description": "Human-readable passphrase stored encrypted over IPFS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangwao/zilch.git"
+  },
+  "keywords": [
+    "generate",
+    "human-readable",
+    "passphrases",
+    "from",
+    "cli",
+    "store",
+    "encrypted",
+    "IPFS"
+  ],
+  "author": "Matej @yangwao Nemcek <ybdaba@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangwao/zilch/issues"
+  },
+  "homepage": "https://github.com/yangwao/zilch#readme",
+  "dependencies": {
+    "blakejs": "^0.4.7",
+    "inquirer": "^2.0.0",
+    "niceware": "^1.0.3"
+  }
+}
