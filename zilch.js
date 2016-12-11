@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 'use strict';
 
-const meow = require('meow');
-const niceware = require('niceware');
 const blake = require('blakejs')
-const inquirer = require('inquirer');
+const inquirer = require('inquirer')
+const meow = require('meow')
+const niceware = require('niceware')
 const cli = meow(`
   Usage
   $ zilch <domain> <even-sized entropy> <joinChar>`)
@@ -31,10 +31,10 @@ inquirer.prompt([
   const domain = blake.blake2bHex(mpw, i.domain, 32)
   // const str = domain.toLowerCase().replace(/[,\s]/g, '');
   const mix = blake.blake2bHex(mpw, domain, i.entropy)
-  const buffer = Buffer.from(mix, 'hex');
-  const arr = niceware.bytesToPassphrase(buffer);
-  const password = arr.join(i.joinChar);
+  const buffer = Buffer.from(mix, 'hex')
+  const arr = niceware.bytesToPassphrase(buffer)
+  const password = arr.join(i.joinChar)
   console.log(password);
 }).catch(function(err) {
-  console.error(err.message);
+  console.error(err.message)
 })
