@@ -1,6 +1,6 @@
 {
   "name": "zilchpass",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Human-readable passphrase generator w/ encrypted store over IPFS",
   "main": "index.js",
   "scripts": {
