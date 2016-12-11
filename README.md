@@ -26,6 +26,7 @@ zilch "nothing," 1966, from earlier sense of "meaningless speech" (1960), origin
 * encrypted store over IPFS
 * web thingy
 * auto clipboard / auto clean clipboard
+* cut dependencies
 
 ## Thanks
 

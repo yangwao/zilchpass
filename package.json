@@ -14,18 +14,27 @@
     "generate",
     "human-readable",
     "passphrases",
-    "from",
     "cli",
     "store",
     "encrypted",
     "IPFS"
   ],
-  "author": "Matej @yangwao Nemcek <ybdaba@gmail.com>",
+  "author": {
+    "name": "Matej Nemcek",
+    "twitter": "@yangwao",
+    "email": "ybdaba@gmail.com"
+  },
+  "bin": {
+    "zilchpass": "zilch.js"
+  },
+  "files": [
+    "zilch.js"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yangwao/zilch/issues"
+    "url": "https://github.com/yangwao/zilchpass/issues"
   },
-  "homepage": "https://github.com/yangwao/zilch#readme",
+  "homepage": "https://github.com/yangwao/zilchpass#readme",
   "dependencies": {
     "blakejs": "^0.4.7",
     "inquirer": "^2.0.0",
