@@ -1,7 +1,7 @@
 {
   "name": "zilchpass",
   "version": "0.0.3",
-  "description": "Human-readable passphrase stored encrypted over IPFS",
+  "description": "Human-readable passphrase generator w/ encrypted store over IPFS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
