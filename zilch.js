@@ -8,7 +8,7 @@ const meow = require('meow')
 const niceware = require('niceware')
 const cli = meow(`
   Usage
-  $ zilch <domain> <even-sized entropy> <joinChar> <clipboard-timeout-in-ms>`)
+  $ zilch domain <even-sized entropy> <joinChar> <clipboard-timeout-in-ms>`)
 const i = { domain: cli.input[0],
           entropy: cli.input[1],
           joinChar: cli.input[2],

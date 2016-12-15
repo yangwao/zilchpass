@@ -11,7 +11,7 @@ $ npm i -g zilchpass
 $ zilch --help
 
 Usage
-$ zilch <domain> <even-sized entropy> <joinChar> <clipboard-timeout-in-ms>
+$ zilch domain <even-sized entropy> <joinChar> <clipboard-timeout-in-ms>
 ```
 zilch "nothing," 1966, from earlier sense of "meaningless speech" (1960), originally Mr. Zilch, (1931) comic character in the magazine "Ballyhoo." Perhaps from U.S. college slang (early 1900s) Joe Zilsch "an insignificant person." Probably a nonsense syllable, but Zilch is an actual Ger. surname of Slavic origin.
 
@@ -25,9 +25,9 @@ zilch "nothing," 1966, from earlier sense of "meaningless speech" (1960), origin
 * sharable through IPFS
 * encrypted store over IPFS
 * web thingy
-* cut dependencies
 * 2fa token (yop heavy insecure, but 100% practical whenever you lost phone)
 * PWA app
+* cut dependencies
 
 ## Thanks
 

@@ -1,7 +1,7 @@
 {
   "name": "zilchpass",
-  "version": "0.1.0",
-  "description": "Human-readable passphrase generator w/ encrypted store over IPFS",
+  "version": "0.1.1",
+  "description": "Human-readable passphrase generator optional w/ encrypted store over IPFS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,10 +14,11 @@
     "generate",
     "human-readable",
     "passphrases",
-    "cli",
-    "store",
+    "passwords",
+    "storageless",
     "encrypted",
-    "IPFS"
+    "IPFS",
+    "cli"
   ],
   "author": {
     "name": "Matej Nemcek",
