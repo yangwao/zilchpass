@@ -2,15 +2,18 @@
 'use strict';
 
 const blake = require('blakejs')
+const clipboardy = require('clipboardy');
 const inquirer = require('inquirer')
 const meow = require('meow')
 const niceware = require('niceware')
 const cli = meow(`
   Usage
-  $ zilch <domain> <even-sized entropy> <joinChar>`)
+  $ zilch <domain> <even-sized entropy> <joinChar> <clipboard-timeout-in-ms>`)
 const i = { domain: cli.input[0],
           entropy: cli.input[1],
-          joinChar: cli.input[2]
+          joinChar: cli.input[2],
+          clpbrdtimeout: cli.input[3],
+          backupClipboard: clipboardy.readSync()
         }
 
 // default config
@@ -19,6 +22,9 @@ if(i.entropy === undefined)
 
 if(i.joinChar === undefined)
   i.joinChar = '+'
+
+if(i.clpbrdtimeout === undefined)
+  i.clpbrdtimeout = 5000
 
 inquirer.prompt([
   {
@@ -34,7 +40,10 @@ inquirer.prompt([
   const buffer = Buffer.from(mix, 'hex')
   const arr = niceware.bytesToPassphrase(buffer)
   const password = arr.join(i.joinChar)
-  console.log(password);
+  clipboardy.writeSync(password)
+  setTimeout(function() {
+    clipboardy.writeSync(i.backupClipboard)
+  }, cli.input[3]);
 }).catch(function(err) {
   console.error(err.message)
 })

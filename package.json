@@ -1,6 +1,6 @@
 {
   "name": "zilchpass",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Human-readable passphrase generator w/ encrypted store over IPFS",
   "main": "index.js",
   "scripts": {
@@ -37,6 +37,7 @@
   "homepage": "https://github.com/yangwao/zilchpass#readme",
   "dependencies": {
     "blakejs": "^0.4.7",
+    "clipboardy": "^0.1.2",
     "inquirer": "^2.0.0",
     "meow": "^3.7.0",
     "niceware": "^1.0.3"
