@@ -12,7 +12,7 @@ const cli = meow(`
 const i = { domain: cli.input[0],
           entropy: cli.input[1],
           joinChar: cli.input[2],
-          clpbrdtimeout: cli.input[3],
+          clipboardtimeout: cli.input[3],
           backupClipboard: clipboardy.readSync()
         }
 
@@ -23,8 +23,8 @@ if(i.entropy === undefined)
 if(i.joinChar === undefined)
   i.joinChar = '+'
 
-if(i.clpbrdtimeout === undefined)
-  i.clpbrdtimeout = 5000
+if(i.clipboardtimeout === undefined)
+  i.clipboardtimeout = 5000
 
 inquirer.prompt([
   {
@@ -43,7 +43,7 @@ inquirer.prompt([
   clipboardy.writeSync(password)
   setTimeout(function() {
     clipboardy.writeSync(i.backupClipboard)
-  }, cli.input[3]);
+  }, i.clipboardtimeout);
 }).catch(function(err) {
   console.error(err.message)
 })

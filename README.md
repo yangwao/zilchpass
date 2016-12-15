@@ -25,8 +25,9 @@ zilch "nothing," 1966, from earlier sense of "meaningless speech" (1960), origin
 * sharable through IPFS
 * encrypted store over IPFS
 * web thingy
-* 2fa token (yop heavy insecure, but 100% practical whenever you lost phone)
+* 2fa (heavy insecure, but 100% practical whenever you lost phone/token)
 * PWA app
+* optional use MiniLock for encryption
 * cut dependencies
 
 ## Thanks
