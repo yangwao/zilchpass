@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ZilchPass</title>
+  </head>
+  <style>
+    /* Taken from blake2.net */
+    html,body {
+      color: #000000;
+      background-color: white;
+      font-family: sans-serif;
+    }
+    h1 {
+      font-size:275%;
+    }
+    a:link {color:#aa0000; text-decoration:none;}
+    a:visited {color:#aa0000; text-decoration:none;}
+    a:hover {color:#dd0000; text-decoration:none}
+    #digest { font-family: monospace; }
+  </style>
+  <!-- <script src="bundle.js"></script> -->
+  <script src="https://wzrd.in/bundle/blakejs@1.0.1"></script>
+  <body>
+    <h3>gen</h3>
+
+    <p>Input:<br>
+    <textarea id=input cols=80 rows=3>Enter text and press the button.</textarea><br>
+    Digest length: <input id=digest-length type=number min=1 max=32 value=32>
+    Key: <input id=key size=32>
+    <input id=result size=32>
+    <p><button onclick="calculateDigest()">Digest &rarr;</button> <span id=digest></span>
+
+    <script>
+      function decodeUTF8(s) {
+        var i, d = unescape(encodeURIComponent(s)), b = new Uint8Array(d.length);
+        for (i = 0; i < d.length; i++) b[i] = d.charCodeAt(i);
+        return b;
+      }
+      function calculateDigest() {
+        // Get message converting to Unix line breaks.
+        var blake2b = require('blakejs')
+        var msg = document.getElementById('input').value.replace(/\r\n/g, '\n');
+        var key = document.getElementById('key').value;
+        var length = document.getElementById('digest-length').value;
+        try {
+          // var h = new window.blake2b(length, decodeUTF8(key));
+          console.log(blake2b.blake2bHex(msg))
+          var h = new blake2b.blake2bHex(msg);
+
+        } catch (e) {
+          alert("Error: " + e);
+        }
+
+        // h.update(decodeUTF8(msg));
+        // document.getElementById('digest').innerHTML = h.hexDigest();
+      }
+    </script>
+</body>
+</html>

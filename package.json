@@ -4,6 +4,7 @@
   "description": "Human-readable passphrase generator optional w/ encrypted store over IPFS",
   "main": "index.js",
   "scripts": {
+    "build-js": "browserify browser/*.js > static/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -37,7 +38,7 @@
   },
   "homepage": "https://github.com/yangwao/zilchpass#readme",
   "dependencies": {
-    "blakejs": "^0.4.7",
+    "blakejs": "^1.0.1",
     "clipboardy": "^0.1.2",
     "inquirer": "^2.0.0",
     "meow": "^3.7.0",

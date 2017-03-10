@@ -36,6 +36,7 @@ zilch "nothing," 1966, from earlier sense of "meaningless speech" (1960), origin
 * PWA app
 * optional use MiniLock for encryption
 * cut dependencies
+* [proquint - readable, spellable and pronunceable](https://github.com/deoxxa/proquint)
 
 ## Crypto
 
