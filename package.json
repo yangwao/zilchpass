@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build-js": "browserify browser/*.js > static/bundle.js",
-    "test": "standard"
+    "test": "standard",
+    "flow": "flow"
   },
   "repository": {
     "type": "git",
@@ -45,6 +46,8 @@
     "niceware": "^1.0.3"
   },
   "devDependencies": {
+    "flow-bin": "^0.42.0",
+    "flow-remove-types": "^1.2.0",
     "standard": "^9.0.2"
   }
 }
